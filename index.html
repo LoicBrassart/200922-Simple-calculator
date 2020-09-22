@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const firstValue = parseInt(prompt("First operand ?"));
+      const operator = prompt("Operation ?");
+      const secondValue = parseInt(prompt("Second operand ?"));
+
+      /*      if (operator === "+") {
+        console.log(firstValue + secondValue);
+      } else {
+        console.log(firstValue - secondValue);
+      }*/
+
+      switch (operator) {
+        case "+":
+          console.log(firstValue + secondValue);
+          break;
+        case "-":
+          console.log(firstValue - secondValue);
+          break;
+        case "*":
+          console.log(firstValue * secondValue);
+          break;
+        case "/":
+          if (!secondValue) {
+            console.log("ONE DOES NOT DIVIDE BY 0 ! DAMNIT !!!");
+          } else {
+            console.log(firstValue / secondValue);
+          }
+          break;
+        default:
+          console.log("Wrong operator!");
+      }
+    </script>
+  </body>
+</html>
