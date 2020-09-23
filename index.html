@@ -9,7 +9,7 @@
     <script>
       // Insert awesome game here!
       const userName = prompt("What's your name ?");
-      const randNumber = Math.ceil(Math.random() * 100);
+      const randNumber = Math.floor(Math.random() * 100) + 1;
       let userTry = null;
       const initialTries = 10;
       let remainingTries = initialTries;
