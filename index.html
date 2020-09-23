@@ -7,36 +7,20 @@
   </head>
   <body>
     <script>
-      const firstValue = parseInt(prompt("First operand ?"));
-      const operator = prompt("Operation ?");
-      const secondValue = parseInt(prompt("Second operand ?"));
+      // Insert awesome game here!
+      const userName = prompt("What's your name ?");
+      const randNumber = Math.ceil(Math.random() * 100);
+      let userTry = null;
 
-      /*      if (operator === "+") {
-        console.log(firstValue + secondValue);
-      } else {
-        console.log(firstValue - secondValue);
-      }*/
-
-      switch (operator) {
-        case "+":
-          console.log(firstValue + secondValue);
-          break;
-        case "-":
-          console.log(firstValue - secondValue);
-          break;
-        case "*":
-          console.log(firstValue * secondValue);
-          break;
-        case "/":
-          if (!secondValue) {
-            console.log("ONE DOES NOT DIVIDE BY 0 ! DAMNIT !!!");
-          } else {
-            console.log(firstValue / secondValue);
-          }
-          break;
-        default:
-          console.log("Wrong operator!");
+      while (randNumber !== userTry) {
+        userTry = parseInt(prompt("What's your guess ? (1~100)"));
+        if (userTry > randNumber) {
+          console.log("That's less");
+        } else if (userTry < randNumber) {
+          console.log("That's more");
+        }
       }
+      console.log("You win!");
     </script>
   </body>
 </html>
